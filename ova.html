@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>OVA – Números Primos y Compuestos</title>
+</head>
+<body>
+
+<div id="ova-principal">
+
+<header>
+    <img src="logo.png" alt="Logo" class="header-logo">
+    <nav>
+        <button id="btn-inicio"         onclick="mostrar('inicio')"         class="activo">🏠 Inicio</button>
+        <button id="btn-contenido"      onclick="mostrar('contenido')">📖 Contenido</button>
+        <button id="btn-actividades"    onclick="mostrar('actividades')">📚 Actividades</button>
+        <button id="btn-evaluacion"     onclick="mostrar('evaluacion')">📝 Evaluación</button>
+        <button id="btn-agradecimiento" onclick="mostrar('agradecimiento')">✨ Créditos</button>
+    </nav>
+</header>
+
+<div id="barra-progreso"></div>
+
+<main>
+
+    <section id="inicio" class="seccion activa">
+        <h2 class="titulo-degradado">¡Bienvenidos al OVA Matematicas! 🔢</h2>
+        <div class="bienvenida-grid">
+            <div class="bienvenida-card" style="border-color:#52b788; background:#f0fdf4;">
+                <div class="bienvenida-icon">🔐</div>
+                <div class="bienvenida-card-titulo" style="color:#1b4332;">¿Qué aprenderás?</div>
+                <p class="bienvenida-card-texto">Descubrirás qué son los <strong>números primos y compuestos</strong>, por qué son los "ladrillos" de las matemáticas y cómo protegen tu información en internet.</p>
+            </div>
+            <div class="bienvenida-card" style="border-color:#0077b6; background:#eff6ff;">
+                <div class="bienvenida-icon">🗺️</div>
+                <div class="bienvenida-card-titulo" style="color:#1e3a8a;">¿Cómo funciona?</div>
+                <p class="bienvenida-card-texto">Navega por <strong>5 secciones</strong> usando el menú de arriba. Cada sección te lleva más lejos en el aprendizaje.</p>
+            </div>
+            <div class="bienvenida-card" style="border-color:#f59e0b; background:#fffbeb;">
+                <div class="bienvenida-icon">🎮</div>
+                <div class="bienvenida-card-titulo" style="color:#b45309;">Actividades</div>
+                <p class="bienvenida-card-texto">Juega con <strong>juegos interactivos</strong> de Educaplay, resuelve la Criba de Eratóstenes y pon a prueba lo aprendido.</p>
+            </div>
+            <div class="bienvenida-card" style="border-color:#7c3aed; background:#faf5ff;">
+                <div class="bienvenida-icon">📝</div>
+                <div class="bienvenida-card-titulo" style="color:#7c3aed;">Evaluación</div>
+                <p class="bienvenida-card-texto">Al final responde <strong>20 preguntas</strong> y obtén tu nota automática en escala de <strong>0 a 5</strong>.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contenido" class="seccion">
+        <h2>Contenido</h2>
+        <h3 class="contenido-titulo" style="border:none;padding:0;margin-bottom:10px">🎬 Video introductorio</h3>
+        <div class="video">
+            <video controls class="video-estilizado">
+                <source src="Los_números_primos.mp4" type="video/mp4">
+                Tu navegador no soporta este video.
+            </video>
+        </div>
+        <h3 style="font-family:var(--font-title);color:var(--blue);margin-top:30px">📚 Tema: Números Primos y Compuestos</h3>
+        <div id="primer-compuesto">
+            <div class="comprende-box">
+                <div class="label">Comprende</div>
+                <p style="margin-bottom:8px">Los números naturales mayores que uno se clasifican en dos categorías principales: <strong>primos</strong> y <strong>compuestos</strong>, los "ladrillos" con los que se construye todo el universo de los números enteros.</p>
+            </div>
+            <div class="contenido-bloque">
+                <h3 class="contenido-titulo">🔐 1. Números Primos: El Club Exclusivo</h3>
+                <p>Un número primo posee <strong>exactamente dos divisores</strong>: el número uno y él mismo.</p>
+                <div class="contenido-regla">
+                    <span class="contenido-regla-icon">⭐</span>
+                    <div><strong>Regla de oro:</strong> La división entre sus dos únicos divisores siempre da un número entero perfecto.</div>
+                </div>
+                <p><strong>Ejemplos:</strong> 2, 3, 5, 7, 11 y 13.</p>
+                <div class="contenido-casos-grid">
+                    <div class="contenido-caso azul">
+                        <div class="contenido-caso-num">2</div>
+                        <div><strong>La joya absoluta</strong><br>Único número par que es primo.</div>
+                    </div>
+                    <div class="contenido-caso naranja">
+                        <div class="contenido-caso-num">1</div>
+                        <div><strong>El caso inusual</strong><br>No es primo: solo tiene un divisor.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="contenido-bloque verde">
+                <h3 class="contenido-titulo">🔓 2. Números Compuestos: Los Infractores de la Regla</h3>
+                <p>Tienen <strong>más de dos divisores</strong> y pueden expresarse como producto de primos (factorización). Ej: 12 = 2×2×3.</p>
+                <div class="contenido-ejemplos-fila">
+                    <div class="contenido-ejemplo-chip"><span class="chip-num">4</span><span class="chip-desc">Divisores: 1, 2 y 4</span></div>
+                    <div class="contenido-ejemplo-chip"><span class="chip-num">6</span><span class="chip-desc">Divisores: 1, 2, 3 y 6</span></div>
+                    <div class="contenido-ejemplo-chip"><span class="chip-num">9</span><span class="chip-desc">Impar pero compuesto (÷ 1, 3, 9)</span></div>
+                </div>
+            </div>
+            <div class="contenido-bloque morado">
+                <h3 class="contenido-titulo">🌍 3. Importancia y Utilidad Real</h3>
+                <div class="contenido-importancia-lista">
+                    <div class="importancia-item"><span class="importancia-icon">🔒</span><div><strong>Seguridad Digital:</strong> Protegen la criptografía de cuentas bancarias y correos electrónicos.</div></div>
+                    <div class="importancia-item"><span class="importancia-icon">🧮</span><div><strong>Criba de Eratóstenes:</strong> Método antiguo para encontrar primos eliminando múltiplos compuestos.</div></div>
+                    <div class="importancia-item"><span class="importancia-icon">♾️</span><div><strong>Infinitud:</strong> Los primos nunca se acaban, siempre habrá nuevos "ladrillos" matemáticos.</div></div>
+                </div>
+            </div>
+            <div class="act-digital-wrap">
+                <h3 class="act-digital-titulo">✏️ Actividades del Contenido</h3>
+                <div class="act-digital-card">
+                    <div class="act-digital-header" onclick="toggleActContenido('act-criba')">
+                        <span class="act-num-badge">1</span>
+                        <span><b>Ejercitación:</b> Criba de Eratóstenes — encuentra los primos menores que 100</span>
+                        <span class="act-chevron">▼</span>
+                    </div>
+                    <div id="act-criba" class="act-digital-body">
+                        <div class="sieve-wrap">
+                            <div id="sieve" class="sieve-grid"></div>
+                            <div class="sieve-legend">
+                                <div class="legend-title">Pasos:</div>
+                                <ol>
+                                    <li>Tacha el número 1.</li>
+                                    <li>Tacha los múltiplos de 2, excepto el 2.</li>
+                                    <li>Tacha los múltiplos de 3, excepto el 3.</li>
+                                    <li>Tacha los múltiplos de 5, excepto el 5.</li>
+                                    <li>Tacha los múltiplos de 7, excepto el 7.</li>
+                                    <li>Los restantes son números primos.</li>
+                                </ol>
+                                <button onclick="applySieve()" class="btn-sieve">Aplicar criba ▶</button>
+                                <button onclick="resetSieve()" class="btn-reset">Reiniciar</button>
+                            </div>
+                        </div>
+                        <p style="margin-top:10px;font-size:13px">Primos entre 1 y 100: <span id="prime-list" style="color:var(--blue);font-weight:700"></span></p>
+                    </div>
+                </div>
+                <div class="act-digital-card">
+                    <div class="act-digital-header" onclick="toggleActContenido('act-vf')">
+                        <span class="act-num-badge">2</span>
+                        <span><b>Comunicación:</b> Verdadero (V) o Falso (F) — selecciona y justifica</span>
+                        <span class="act-chevron">▼</span>
+                    </div>
+                    <div id="act-vf" class="act-digital-body">
+                        <div id="vf-resultado" style="display:none;" class="vf-resultado-box"></div>
+                        <div class="vf-item">
+                            <p class="vf-enunciado">El número 1 es divisor de cualquier número.</p>
+                            <div class="vf-botones">
+                                <button class="vf-btn" onclick="vfElegir(this,0,'V')">V</button>
+                                <button class="vf-btn" onclick="vfElegir(this,0,'F')">F</button>
+                            </div>
+                            <input type="text" class="vf-input" placeholder="Escribe un ejemplo..." id="vf-ej-0">
+                        </div>
+                        <div class="vf-item">
+                            <p class="vf-enunciado">Todo número es divisor de sí mismo.</p>
+                            <div class="vf-botones">
+                                <button class="vf-btn" onclick="vfElegir(this,1,'V')">V</button>
+                                <button class="vf-btn" onclick="vfElegir(this,1,'F')">F</button>
+                            </div>
+                            <input type="text" class="vf-input" placeholder="Escribe un ejemplo..." id="vf-ej-1">
+                        </div>
+                        <div class="vf-item">
+                            <p class="vf-enunciado">No hay números pares primos.</p>
+                            <div class="vf-botones">
+                                <button class="vf-btn" onclick="vfElegir(this,2,'V')">V</button>
+                                <button class="vf-btn" onclick="vfElegir(this,2,'F')">F</button>
+                            </div>
+                            <input type="text" class="vf-input" placeholder="Escribe un ejemplo..." id="vf-ej-2">
+                        </div>
+                        <button class="btn-sieve" style="margin-top:14px" onclick="vfVerificar()">Verificar respuestas ✓</button>
+                    </div>
+                </div>
+                <div class="act-digital-card">
+                    <div class="act-digital-header" onclick="toggleActContenido('act-mcd')">
+                        <span class="act-num-badge">3</span>
+                        <span><b>Solución de problemas:</b> Jornada ecológica — MCD</span>
+                        <span class="act-chevron">▼</span>
+                    </div>
+                    <div id="act-mcd" class="act-digital-body">
+                        <p>En quinto A hay <strong>30 estudiantes</strong> y en quinto B hay <strong>24</strong>. Los organizadores quieren hacer el mismo número de equipos en cada curso sin que sobre ningún estudiante. ¿Cuántos equipos pueden formar?</p>
+                        <div class="mcd-pista">
+                            <b>💡 Pista:</b> Calcula el MCD (Máximo Común Divisor) de 30 y 24.
+                            <div class="math-row" style="margin-top:8px">
+                                <span class="math-chip">D₃₀ = {1, 2, 3, 5, 6, 10, 15, 30}</span>
+                                <span class="math-chip">D₂₄ = {1, 2, 3, 4, 6, 8, 12, 24}</span>
+                            </div>
+                        </div>
+                        <div class="mcd-respuesta-wrap">
+                            <label style="font-weight:700;font-size:14px">Tu respuesta: ¿Cuántos equipos?</label>
+                            <div style="display:flex;gap:10px;align-items:center;margin-top:8px;flex-wrap:wrap">
+                                <input type="number" id="mcd-input" class="vf-input" style="width:100px;font-size:18px;font-weight:700;text-align:center" placeholder="?">
+                                <button class="btn-sieve" onclick="mcdVerificar()">Comprobar ✓</button>
+                                <button class="btn-reset" onclick="mcdPista()">Ver solución</button>
+                            </div>
+                            <div id="mcd-feedback" style="margin-top:12px"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page-footer">Pensamiento numérico • Proyecto SE</div>
+        </div>
+    </section>
+
+    <section id="actividades" class="seccion">
+        <h2>Actividades Interactivas</h2>
+        <p class="texto-introductorio" style="margin-bottom:20px">Haz clic en cada actividad para desplegarla.</p>
+        <div class="act-acordeon">
+            <button class="act-acordeon-header" onclick="toggleJuego('juego1')">
+                <span class="act-acordeon-icon">🎮</span>
+                <span class="act-acordeon-titulo">Actividad 1 — Primos y Números Compuestos</span>
+                <span class="act-acordeon-chevron" id="chv-juego1">▼</span>
+            </button>
+            <div id="juego1" class="seccion-juego">
+                <div class="marco-educaplay-interno">
+                    <iframe src="https://www.educaplay.com/game/29137879-primos_y_numeros_compuestos.html"
+                        allow="fullscreen; autoplay; clipboard-write; encrypted-media; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="pie-actividad-juego">🎮 ¡Pon a prueba tus conocimientos!</div>
+            </div>
+        </div>
+        <div class="act-acordeon">
+            <button class="act-acordeon-header" onclick="toggleJuego('juego2')">
+                <span class="act-acordeon-icon">🧩</span>
+                <span class="act-acordeon-titulo">Actividad 2 — Primos y Números Compuestos II</span>
+                <span class="act-acordeon-chevron" id="chv-juego2">▼</span>
+            </button>
+            <div id="juego2" class="seccion-juego">
+                <div class="marco-educaplay-interno">
+                    <iframe src="https://www.educaplay.com/game/29174565-primos_y_numeros_compuestos.html"
+                        allow="fullscreen; autoplay; clipboard-write; encrypted-media; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="pie-actividad-juego">🎮 ¡Pon a prueba tus conocimientos!</div>
+            </div>
+        </div>
+        <div class="act-acordeon">
+            <button class="act-acordeon-header" onclick="toggleJuego('juego3')">
+                <span class="act-acordeon-icon">⭐</span>
+                <span class="act-acordeon-titulo">Actividad 3 — Números Primos Ejercicio 3</span>
+                <span class="act-acordeon-chevron" id="chv-juego3">▼</span>
+            </button>
+            <div id="juego3" class="seccion-juego">
+                <div class="marco-educaplay-interno">
+                    <iframe src="https://www.educaplay.com/game/29195932-numeros_primos_ejercicio_3.html"
+                        allow="fullscreen; autoplay; allow-top-navigation-by-user-activation"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="pie-actividad-juego">🎮 ¡Pon a prueba tus conocimientos!</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="evaluacion" class="seccion">
+        <h2>Evaluación Final</h2>
+        <p class="texto-introductorio" style="margin-bottom:24px">
+            Responde las 20 preguntas. Puedes avanzar de página solo cuando hayas contestado todas.
+            Al final verás tu <strong>nota</strong> y la revisión completa de respuestas.
+        </p>
+        <div class="quiz-prog-bg"><div class="quiz-prog" id="quiz-prog"></div></div>
+        <div id="quiz-body"></div>
+    </section>
+
+    <section id="agradecimiento" class="seccion">
+        <h2>Créditos del OVA</h2>
+        <p class="texto-introductorio" style="margin-bottom:28px">
+            Este Objeto Virtual de Aprendizaje fue desarrollado con dedicación por el siguiente equipo.
+        </p>
+        <div class="creditos-grid">
+            <div class="credito-card">
+                <div class="credito-foto-wrap"><img src="jose mercado.jpg" alt="Integrante 1" class="credito-foto"></div>
+                <div class="credito-nombre">Jose Armando Mercado Ibarra</div>
+                <div class="credito-rol"></div>
+            </div>
+            <div class="credito-card">
+                <div class="credito-foto-wrap"><img src="sheryk.jpeg" alt="Integrante 2" class="credito-foto"></div>
+                <div class="credito-nombre">Sheryk Marcela Hernandez Ibarra</div>
+                <div class="credito-rol"></div>
+            </div>
+            <div class="credito-card">
+                <div class="credito-foto-wrap"><img src="karol.jpeg" alt="Integrante 3" class="credito-foto"></div>
+                <div class="credito-nombre">Karol Daniela Bustamante Benitez</div>
+                <div class="credito-rol"></div>
+            </div>
+            <div class="credito-card">
+                <div class="credito-foto-wrap"><img src="maria.jpeg" alt="Integrante 4" class="credito-foto"></div>
+                <div class="credito-nombre">Maria Fernanda Lopez Pabon</div>
+                <div class="credito-rol"></div>
+            </div>
+        </div>
+        <div class="creditos-grid">
+            <div class="credito-card">
+                <div class="credito-foto-wrap"><img src="foto-integrante1.jpg" alt="Docente 1" class="credito-foto"></div>
+                <div class="credito-nombre">Aly Benhur Culchac de la vega</div>
+                <div class="credito-rol">Docente</div>
+            </div>
+            <div class="credito-card">
+                <div class="credito-foto-wrap"><img src="foto-integrante2.jpg" alt="Docente 2" class="credito-foto"></div>
+                <div class="credito-nombre">Eney Fernando Lomineth Villera</div>
+                <div class="credito-rol">Docente asesor</div>
+            </div>
+        </div>
+        <p style="text-align:center;font-size:50px;margin-top:30px;animation:rebote 1s ease infinite alternate">🎓</p>
+        <p style="text-align:center;color:#64748b;font-size:14px;margin-top:10px">Licenciatura en Informática · Pensamiento Numérico</p>
+    </section>
+
+</main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
