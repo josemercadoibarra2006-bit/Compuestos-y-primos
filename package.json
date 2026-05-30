@@ -1,0 +1,27 @@
+{
+  "name": "primary",
+  "version": "1.0.0",
+  "description": "Objeto Virtual de Aprendizaje es un recurso educativo digital dirigido a estudiantes de grado quinto de básica primaria, desarrollado con HTML5, CSS3 y JavaScript para enseñar de forma interactiva los conceptos de números primos y compuestos.",
+  "main": "index.js",
+  "scripts": {
+    "build": "esbuild src/script.js --bundle --outfile=dist/script.js --format=iife",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josemercadoibarra2006-bit/Compuestos-y-primos.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/josemercadoibarra2006-bit/Compuestos-y-primos/issues"
+  },
+  "homepage": "https://github.com/josemercadoibarra2006-bit/Compuestos-y-primos#readme",
+  "dependencies": {
+    "@vercel/speed-insights": "^2.0.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.0"
+  }
+}
