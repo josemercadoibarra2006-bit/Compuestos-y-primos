@@ -7,9 +7,9 @@
     <title>OVA – Números Primos y Compuestos</title>
 </head>
 <body>
-
+ 
 <div id="ova-principal">
-
+ 
 <header>
     <img src="logo.png" alt="Logo" class="header-logo">
     <nav>
@@ -20,11 +20,11 @@
         <button id="btn-agradecimiento" onclick="mostrar('agradecimiento')">✨ Créditos</button>
     </nav>
 </header>
-
+ 
 <div id="barra-progreso"></div>
-
+ 
 <main>
-
+ 
     <section id="inicio" class="seccion activa">
         <h2 class="titulo-degradado">¡Bienvenidos al OVA Matematicas! 🔢</h2>
         <div class="bienvenida-grid">
@@ -50,15 +50,17 @@
             </div>
         </div>
     </section>
-
+ 
     <section id="contenido" class="seccion">
         <h2>Contenido</h2>
         <h3 class="contenido-titulo" style="border:none;padding:0;margin-bottom:10px">🎬 Video introductorio</h3>
         <div class="video">
-            <video controls class="video-estilizado">
-                <source src="Los_números_primos.mp4" type="video/mp4">
-                Tu navegador no soporta este video.
-            </video>
+            <iframe
+                src="https://www.youtube.com/embed/EF0GVkEhzYk"
+                class="video-estilizado"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
         </div>
         <h3 style="font-family:var(--font-title);color:var(--blue);margin-top:30px">📚 Tema: Números Primos y Compuestos</h3>
         <div id="primer-compuesto">
@@ -195,7 +197,7 @@
             <div class="page-footer">Pensamiento numérico • Proyecto SE</div>
         </div>
     </section>
-
+ 
     <section id="actividades" class="seccion">
         <h2>Actividades Interactivas</h2>
         <p class="texto-introductorio" style="margin-bottom:20px">Haz clic en cada actividad para desplegarla.</p>
@@ -245,7 +247,7 @@
             </div>
         </div>
     </section>
-
+ 
     <section id="evaluacion" class="seccion">
         <h2>Evaluación Final</h2>
         <p class="texto-introductorio" style="margin-bottom:24px">
@@ -255,7 +257,7 @@
         <div class="quiz-prog-bg"><div class="quiz-prog" id="quiz-prog"></div></div>
         <div id="quiz-body"></div>
     </section>
-
+ 
     <section id="agradecimiento" class="seccion">
         <h2>Créditos del OVA</h2>
         <p class="texto-introductorio" style="margin-bottom:28px">
@@ -298,7 +300,7 @@
         <p style="text-align:center;font-size:50px;margin-top:30px;animation:rebote 1s ease infinite alternate">🎓</p>
         <p style="text-align:center;color:#64748b;font-size:14px;margin-top:10px">Licenciatura en Informática · Pensamiento Numérico</p>
     </section>
-
+ 
 </main>
 </div>
 <script src="script.js"></script>
